@@ -1,0 +1,36 @@
+<div class="jumbotron">
+  <h1 class="text-center">User management system</h1>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <span>First row</span>
+    <app-user-detail-form></app-user-detail-form>
+  </div>
+  <div class="col-md-6">
+    <span>Second row</span>
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th>EmployeeID.</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Sex</th>
+          <th>Tel.</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of service.list">
+          <th>{{user.id}}</th>
+          <th>{{user.name}}</th>
+          <th>{{user.surname}}</th>
+          <th>{{user.sex}}</th>
+          <th>{{user.tel}}</th>
+          <th>
+            <button class="btn btn-danger btn-sm btn-block">DELETE</button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
